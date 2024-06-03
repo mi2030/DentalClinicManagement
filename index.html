@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Clinic Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Dental Clinic Management System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#appointments">Appointments</a></li>
+            <li><a href="#patients">Patients</a></li>
+            <li><a href="#treatment-plans">Treatment Plans</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>Welcome to the Dental Clinic Management System</h2>
+            <p>Manage your appointments, patients, and treatment plans efficiently.</p>
+        </section>
+        <section id="appointments" style="display: none;">
+            <h2>Appointments</h2>
+            <form id="appointment-form">
+                <label for="patient-name-appointment">Patient Name:</label>
+                <input type="text" id="patient-name-appointment" name="patient-name-appointment" required><br>
+                <label for="appointment-date">Appointment Date:</label>
+                <input type="date" id="appointment-date" name="appointment-date" required><br>
+                <label for="appointment-time">Appointment Time:</label>
+                <input type="time" id="appointment-time" name="appointment-time" required><br>
+                <button type="submit">Add Appointment</button>
+            </form>
+            <h3>Upcoming Appointments</h3>
+            <ul id="appointments-list"></ul>
+        </section>
+        <section id="patients" style="display: none;">
+            <h2>Patients</h2>
+            <form id="patient-form">
+                <label for="patient-name">Patient Name:</label>
+                <input type="text" id="patient-name" name="patient-name" required><br>
+                <label for="patient-age">Age:</label>
+                <input type="number" id="patient-age" name="patient-age" required><br>
+                <label for="patient-gender">Gender:</label>
+                <select id="patient-gender" name="patient-gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select><br>
+                <label for="patient-contact">Contact Number:</label>
+                <input type="tel" id="patient-contact" name="patient-contact" required><br>
+                <label for="patient-email">Email:</label>
+                <input type="email" id="patient-email" name="patient-email" required><br>
+                <label for="patient-address">Address:</label>
+                <textarea id="patient-address" name="patient-address" required></textarea><br>
+                <label for="patient-history">Medical History:</label>
+                <textarea id="patient-history" name="patient-history" required></textarea><br>
+                <button type="submit">Add Patient</button>
+            </form>
+            <h3>Patient List</h3>
+            <ul id="patients-list"></ul>
+        </section>
+        <section id="treatment-plans" style="display: none;">
+            <h2>Treatment Plans</h2>
+            <form id="treatment-form">
+                <label for="patient-name-treatment">Patient Name:</label>
+                <input type="text" id="patient-name-treatment" name="patient-name-treatment" required><br>
+                <label for="treatment-details">Treatment Details:</label>
+                <textarea id="treatment-details" name="treatment-details" required></textarea><br>
+                <button type="submit">Add Treatment Plan</button>
+            </form>
+            <h3>Treatment Plan List</h3>
+            <ul id="treatment-list"></ul>
+            <button id="print-treatment-plans">Print Treatment Plans</button>
+        </section>
+        <section id="contact" style="display: none;">
+            <h2>Contact</h2>
+            <p>For any inquiries, please contact us at <a href="mailto:info@dentalclinic.com">info@dentalclinic.com</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dental Clinic Management. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
